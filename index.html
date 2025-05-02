@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ΣΟΓΙΑΣ - Γαλακτοκομικά Μηχανήματα</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <nav class="hero-nav">
+      <img src="images\Small logo.jpg" alt="Sogias Logo" class="logo" />
+      <a href="#home">Αρχική</a>
+      <a href="#products">Προϊόντα</a>
+      <a href="#projects">Έργα</a>
+      <a href="#contact">Επικοινωνία</a>
+    </nav>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Καλώς ήλθατε στη ΣΟΓΙΑΣ</h1>
+        <p>Πρωτοπόροι στα Γαλακτοκομικά Μηχανήματα</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="home">
+      <h2>Καλώς ήλθατε</h2>
+      <p>
+        Στο δικτυακό τόπο της εταιρείας γαλακτοκομικών μηχανημάτων ΣΟΓΙΑΣ. Η εταιρεία μας διαθέτει τα πλέον σύγχρονα μηχανήματα,
+        αντιπροσωπεύει τους μεγαλύτερους κατασκευαστές μηχανημάτων και προσφέρει μία σειρά ολοκληρωμένων υπηρεσιών και προϊόντων για όλα τα στάδια της παραγωγής.
+      </p>
+    </section>
+
+    <section id="products">
+      <h2>Τα Προϊόντα μας</h2>
+      <div class="product-gallery">
+        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=600&q=80" alt="Μηχανήματα 1" />
+        <img src="https://images.unsplash.com/photo-1581090700227-1e8e8e42e9c7?auto=format&fit=crop&w=600&q=80" alt="Μηχανήματα 2" />
+        <img src="https://images.unsplash.com/photo-1588761554630-f5a53b30568f?auto=format&fit=crop&w=600&q=80" alt="Μηχανήματα 3" />
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Έργα</h2>
+      <ul>
+        <li>ΤΥΡΑΣ ΑΕ – ΤΡΙΚΑΛΑ</li>
+        <li>ΟΛΥΜΠΟΣ ΑΕ – ΛΑΡΙΣΑ</li>
+        <li>ΤΡΙΚΚΗ ΕΡΓ/ΓΑΛΑΚΤΟΣ ΤΡΙΚΑΛΩΝ – ΤΡΙΚΑΛΑ</li>
+        <li>ΜΑΤΗΣ ΑΕ – ΤΡΙΚΑΛΑ</li>
+        <li>ΦΑΓΕ ΑΕ – ΑΘΗΝΑ</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Επικοινωνία</h2>
+      <p>
+        ΣΟΓΙΑΣ<br />
+        qwer 12, Τρίκαλα<br />
+        Τηλέφωνο: 24310-1234<br />
+        Email: <a href="mailto:info@sogias.gr">info@qwerty.gr</a>
+      </p>
+    </section>
+  </main>
+  <!-- Add this script to ensure menu links work -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.hero-nav a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
